@@ -28,15 +28,22 @@ public class FileOpener extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
-        if (action.equals("openFile")) {
 
-            this.openFile(args.getString(0));
+        try {
+            if (action.equals("openFile")) {
 
-            callbackContext.success("Open file success");
+                this.openFile(args.getString(0));
 
-            return true;
+                callbackContext.success("Open file success");
+
+                return true;
+            }
+            return false;
+        } catch (IOException e) {
+            callbackContext.error("IOException");
+            return false;
         }
-        return false;
+
     }
 
     private void openFile(String url) throws IOException {
