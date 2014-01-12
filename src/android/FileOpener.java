@@ -27,7 +27,7 @@ import org.json.JSONObject;
 public class FileOpener extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws IOException {
         if (action.equals("openFile")) {
             openFile(args.getString(0));
             callbackContext.success();
