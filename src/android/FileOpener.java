@@ -42,6 +42,9 @@ public class FileOpener extends CordovaPlugin {
         } catch (IOException e) {
             callbackContext.error("IOException");
             return false;
+        } catch (JSONException e) {
+            callbackContext.error("JSONException");
+            return false;
         }
 
     }
