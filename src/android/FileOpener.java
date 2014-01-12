@@ -41,7 +41,6 @@ public class FileOpener extends CordovaPlugin {
         return false;
     }
 
-/*
     private void openFile(String url) throws IOException {
         Uri uri = Uri.parse(url);
 
@@ -85,6 +84,5 @@ public class FileOpener extends CordovaPlugin {
 
         this.cordova.getActivity().startActivity(intent);
     }
-*/
 
 }
