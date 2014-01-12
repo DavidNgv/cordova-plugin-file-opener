@@ -30,9 +30,9 @@ public class FileOpener extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
         if (action.equals("openFile")) {
 
-            //openFile(args.getString(0));
+            openFile(args.getString(0));
 
-            callbackContext.success();
+            callbackContext.success("Open file success");
 
             return true;
         }
