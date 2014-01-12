@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="org.apache.cordova.fileopener" version="0.0.1">
+        id="org.apache.cordova.plugins.file-opener" version="0.0.1">
     <name>FileOpener</name>
     <description>Cordova File Opener Plugin</description>
     <license>Apache 2.0</license>
@@ -14,7 +14,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FileOpener">
-                <param name="android-package" value="org.apache.cordova.fileopener.FileOpener"/>
+                <param name="android-package" value="org.apache.cordova.plugins.FileOpener"/>
             </feature>
         </config-file>
 
@@ -22,7 +22,7 @@
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
 
-        <source-file src="src/android/FileOpener.java" target-dir="src/org/apache/cordova/fileopener" />
+        <source-file src="src/android/FileOpener.java" target-dir="src/org/apache/cordova/plugins/file-opener" />
 
         <js-module src="www/FileOpener.js" name="FileOpener">
             <clobbers target="FileOpener" />
